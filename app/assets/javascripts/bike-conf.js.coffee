@@ -85,7 +85,7 @@ class BikeConf
 		image = $('<img src="'+imageSrc+'" style="width: '+@currentPartWidth+'px; height: '+@currentPartHeight+'px" />')
 			.load (event) =>
 				$(this).unbind(event)
-				$('#conf-'+elementName).append(image)
+				$('#conf-'+elementName + ' img').attr('src', imageSrc)
 				@hideLoader()
 
 	changeImage: (elementName, imageSrc) ->
