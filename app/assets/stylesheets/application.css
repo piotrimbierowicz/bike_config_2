@@ -27,8 +27,6 @@
 }
 
 .conf-element {
-	width: 500px;
-	height: 327px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -36,14 +34,10 @@
 
 #conf-bike {
 	position: relative;
-	width: 500px;
-	height: 327px;
 	float: left;
 }
 
 #conf-bike img {
-	width: 500px;
-	height: 327px;
 }
 
 #conf-setup-menu {

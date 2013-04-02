@@ -3,6 +3,10 @@ window.ConfLoadingNow = 0
 class BikeConf
 
 	constructor: ->
+		@orginalPartWidth = 1000
+		@orginalPartHeight = 655
+		@minPartWidth = @currentPartWidth = 500
+		@minPartHeight = @currentPartHeight = 328
 		@loadData()
 		@dataSet
 		@defaultBike = { 'base' : 1, 'lamp' : 1, 'nozk' : 1, 'siod' : 1, 'chwy' : 1 }
@@ -14,6 +18,34 @@ class BikeConf
 		@colorSelector = $('#conf-element-colors ul')
 		@images_path = 'images/parts/'
 		@loadingNow = 0
+		@automatedScale()
+
+	scaleApp: ->
+		currentWidth = parseInt($(window).width())
+		if currentWidth > 1010
+			newWidth = currentWidth - 174 - 210
+			if newWidth > 1000
+				$('.conf-element img').css('width', @orginalPartWidth)
+				$('.conf-element img').css('height', @orginalPartHeight)
+				$('#conf-bike').css('height', @orginalPartHeight)
+				@currentPartWidth = @minPartWidth
+				@currentPartHeight = @minPartHeight
+			else
+				$('.conf-element img').css('width', newWidth)
+				$('.conf-element img').css('height', @orginalPartHeight * (newWidth / @orginalPartWidth) )
+				$('#conf-bike').css('height', @orginalPartHeight * (newWidth / @orginalPartWidth))
+				@currentPartWidth = newWidth
+				@currentPartHeight = @orginalPartHeight * (newWidth / @orginalPartWidth)
+		else
+			$('.conf-element img').css('width', @minPartWidth)
+			$('.conf-element img').css('height', @minPartHeight)
+			$('#conf-bike').css('height', @minPartHeight)
+			@currentPartWidth = @minPartWidth
+			@currentPartHeight = @minPartHeight
+
+	automatedScale: ->
+		$(window).resize =>
+			@scaleApp()
 
 	loadData: ->
 		$.get('/data', (data) =>
@@ -26,6 +58,7 @@ class BikeConf
 		@constructRightMenu( @dataSet.right_elements )
 		@initBike( @dataSet.left_elements )
 		@initBike( @dataSet.right_elements )
+		@scaleApp()
 
 	prepareColorSelector: (elementSet, index) ->
 		element = elementSet.types[index]
@@ -48,17 +81,14 @@ class BikeConf
 			@createImage( element.sys_name, imageSrc )
 
 	createImage: (elementName, imageSrc) ->
-		console.log('f:createImage')
 		@showLoader()
-		image = $('<img src="'+imageSrc+'" />')
+		image = $('<img src="'+imageSrc+'" style="width: '+@currentPartWidth+'px; height: '+@currentPartHeight+'px" />')
 			.load (event) =>
 				$(this).unbind(event)
 				$('#conf-'+elementName).append(image)
 				@hideLoader()
 
 	changeImage: (elementName, imageSrc) ->
-		console.log('f:changeImage')
-		console.log(elementName)
 		@showLoader()
 		$('<img src="'+imageSrc+'" />')
 				.load (event) =>
@@ -108,9 +138,10 @@ class BikeConf
 		# label
 		label.click( (event) =>
 			event.preventDefault()
+			currentIndex = parseInt(label.attr('data-element'))
 			$('.conf-btn.active').removeClass('active')
 			label.addClass('active')
-			@prepareColorSelector(element, 0)
+			@prepareColorSelector(element, currentIndex)
 		)
 		# left arrow
 		leftarrow.click( (event) =>
@@ -153,12 +184,10 @@ class BikeConf
 
 	showLoader: ->
 		window.ConfLoadingNow += 1
-		console.log(window.ConfLoadingNow)
 		@loaderIcon.css('visibility', 'visible')
 
 	hideLoader: (loaderConut) ->
 		window.ConfLoadingNow -= 1
-		console.log(window.ConfLoadingNow)
 		if window.ConfLoadingNow == 0
 			@loaderIcon.css('visibility', 'hidden')
 
