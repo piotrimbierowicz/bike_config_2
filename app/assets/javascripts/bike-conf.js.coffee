@@ -16,9 +16,17 @@ class BikeConf
 		@secondaryMenu = $('#conf-setup-secondary-menu ul')
 		@elementTypeLabel = $('#conf-element-type-desc .type')
 		@colorSelector = $('#conf-element-colors ul')
+		@sumPrice = $('#conf-element-pricebox p.price span')
 		@images_path = 'images/parts/'
 		@loadingNow = 0
 		@automatedScale()
+
+	calculatePrice: ->
+		sum = 0.0	
+		$('.conf-element').each (element) ->
+			sum += parseFloat($(this).attr('data-price'))
+		@sumPrice.html(sum.toFixed(2).replace('.', ','))
+
 
 	scaleApp: ->
 		currentWidth = parseInt($(window).width())
@@ -59,6 +67,7 @@ class BikeConf
 		@initBike( @dataSet.left_elements )
 		@initBike( @dataSet.right_elements )
 		@scaleApp()
+		@calculatePrice()
 
 	prepareColorSelector: (elementSet, index) ->
 		element = elementSet.types[index]
@@ -72,12 +81,14 @@ class BikeConf
 		selector.click( (event) => 
 			event.preventDefault()
 			imageSrc = @images_path + color.file
-			@changeImage( elementSet.sys_name, imageSrc )	
+			@changeImage( elementSet.sys_name, imageSrc )
+			$('#conf-'+elementSet.sys_name).attr('data-price', color.price)	
 		)
 
 	initBike: (elementsMap) ->
 		for element in elementsMap
 			imageSrc = @images_path + element.types[0].colors[0].file
+			$('#conf-'+element.sys_name).attr('data-price', element.types[0].colors[0].price)
 			@createImage( element.sys_name, imageSrc )
 
 	createImage: (elementName, imageSrc) ->
@@ -154,11 +165,13 @@ class BikeConf
 			if(elementIndex == -1)
 				elementIndex = element.types.length - 1
 			imageSrc = @images_path + element.types[elementIndex].colors[0].file
+			$('#conf-'+element.sys_name).attr('data-price', element.types[elementIndex].colors[0].price)
 			label.attr('data-element', elementIndex)
 			@changeImage( element.sys_name, imageSrc )
 			$('.conf-btn.active').removeClass('active')
 			label.addClass('active')
 			@prepareColorSelector(element, elementIndex)
+			@calculatePrice()
 		)
 		# right arrow
 		rightarrow.click( (event) =>
@@ -171,11 +184,13 @@ class BikeConf
 			if(elementIndex == -1)
 				elementIndex = element.types.length - 1
 			imageSrc = @images_path + element.types[elementIndex].colors[0].file
+			$('#conf-'+element.sys_name).attr('data-price', element.types[elementIndex].colors[0].price)
 			label.attr('data-element', elementIndex)
 			@changeImage( element.sys_name, imageSrc )
 			$('.conf-btn.active').removeClass('active')
 			label.addClass('active')
 			@prepareColorSelector(element,elementIndex)
+			@calculatePrice()
 		)
 		container.append leftarrow
 		container.append label
