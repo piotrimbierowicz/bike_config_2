@@ -3,6 +3,7 @@ window.ConfLoadingNow = 0
 class BikeConf
 
 	constructor: ->
+		@hamulecBeben = true
 		@orginalPartWidth = 1000
 		@orginalPartHeight = 655
 		@minPartWidth = @currentPartWidth = 500
@@ -19,6 +20,14 @@ class BikeConf
 		@images_path = 'images/parts/'
 		@loadingNow = 0
 		@automatedScale()
+
+	updateHamulec: ->
+		if @hamulecBeben
+			$('#conf-wide img').attr('src', $('#conf-wide img').attr('src').replace('v','q'))
+		else
+			$('#conf-wide img').attr('src', $('#conf-wide img').attr('src').replace('q','v'))
+
+	updatePancerze: ->
 
 	restoreDefault: ->
 		@initBike( @dataSet.left_elements )
@@ -110,6 +119,8 @@ class BikeConf
 			@createImage( element.sys_name, imageSrc )
 
 	createImage: (elementName, imageSrc) ->
+		if elementName == 'wide' and !@hamulecBeben
+				imageSrc = imageSrc.replace('q', 'v')
 		@showLoader()
 		image = $('<img src="'+imageSrc+'" style="width: '+@currentPartWidth+'px; height: '+@currentPartHeight+'px" />')
 			.load (event) =>
@@ -118,6 +129,8 @@ class BikeConf
 				@hideLoader()
 
 	changeImage: (elementName, imageSrc) ->
+		if elementName == 'wide' and !@hamulecBeben
+				imageSrc = imageSrc.replace('q', 'v')
 		@showLoader()
 		$('<img src="'+imageSrc+'" />')
 				.load (event) =>
@@ -182,6 +195,16 @@ class BikeConf
 				elementIndex = 0
 			if(elementIndex == -1)
 				elementIndex = element.types.length - 1
+
+			if element.sys_name == 'hamu' and elementIndex == 0
+				@hamulecBeben = true
+				@updateHamulec()
+				@updatePancerze()
+			else 
+				@hamulecBeben = false
+				@updateHamulec()
+				@updatePancerze()	
+
 			imageSrc = @images_path + element.types[elementIndex].colors[0].file
 			$('#conf-'+element.sys_name).attr('data-price', element.types[elementIndex].colors[0].price)
 			label.attr('data-element', elementIndex)
@@ -202,6 +225,15 @@ class BikeConf
 				elementIndex = 0
 			if(elementIndex == -1)
 				elementIndex = element.types.length - 1
+			if element.sys_name == 'hamu' and elementIndex == 0
+				@hamulecBeben = true
+				@updateHamulec()
+				@updatePancerze()
+			else 
+				@hamulecBeben = false
+				@updateHamulec()
+				@updatePancerze()
+
 			imageSrc = @images_path + element.types[elementIndex].colors[0].file
 			$('#conf-'+element.sys_name).attr('data-price', element.types[elementIndex].colors[0].price)
 			label.attr('data-element', elementIndex)

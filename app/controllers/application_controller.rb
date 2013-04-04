@@ -215,16 +215,16 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Widelec', 
 					:colors => [
-						{ :file => 'widelec-b-bialy.png', :name => 'white', :price => 0},
-						{ :file => 'widelec-b-czarny.png', :name => 'black', :price => 0},
-						{ :file => 'widelec-b-1021.png', :name => '1021', :price => 0},
-						{ :file => 'widelec-b-2009.png', :name => '2009', :price => 0},
-						{ :file => 'widelec-b-3027.png', :name => '3027', :price => 0},
-						{ :file => 'widelec-b-4005.png', :name => '4005', :price => 0},
-						{ :file => 'widelec-b-5015.png', :name => '5015', :price => 0},
-						{ :file => 'widelec-b-6018.png', :name => '6018', :price => 0},
-						{ :file => 'widelec-b-6027.png', :name => '6027', :price => 0},
-						{ :file => 'widelec-b-czerwony.png', :name => 'red', :price => 0}
+						{ :file => 'widelec-q-bialy.png', :name => 'white', :price => 0},
+						{ :file => 'widelec-q-czarny.png', :name => 'black', :price => 0},
+						{ :file => 'widelec-q-1021.png', :name => '1021', :price => 0},
+						{ :file => 'widelec-q-2009.png', :name => '2009', :price => 0},
+						{ :file => 'widelec-q-3027.png', :name => '3027', :price => 0},
+						{ :file => 'widelec-q-4005.png', :name => '4005', :price => 0},
+						{ :file => 'widelec-q-5015.png', :name => '5015', :price => 0},
+						{ :file => 'widelec-q-6018.png', :name => '6018', :price => 0},
+						{ :file => 'widelec-q-6027.png', :name => '6027', :price => 0},
+						{ :file => 'widelec-q-czerwony.png', :name => 'red', :price => 0}
 					] 
 				}
 			]
