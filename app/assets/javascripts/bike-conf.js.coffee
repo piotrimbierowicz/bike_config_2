@@ -9,8 +9,7 @@ class BikeConf
 		@minPartHeight = @currentPartHeight = 328
 		@loadData()
 		@dataSet
-		@defaultBike = { 'base' : 1, 'lamp' : 1, 'nozk' : 1, 'siod' : 1, 'chwy' : 1 }
-		@elementKinds = { 'base' : 1, 'lamp' : 2, 'nozk' : 2, 'siod' : 3, 'chwy' : 5 }
+		@defaultBike = {'base': 0, 'wide': 0, 'oslo': 0, 'fblo' :0, 'rblo' :0, 'panc':0, 'ster' :0, 'fszp':0, 'rszp':0, 'ftyr' : 0, 'rtyr' : 0, 'rblo' : 0, 'rblo' : 0, 'chwy' : 0, 'siod': 0, 'nozk': 0, 'robr': 7, 'fobr': 7, 'korb': 7, 'lanc': 3, 'lamp': 0, 'most': 0, 'szty': 0, 'kier': 7, 'hamu': 0 }
 		@loaderIcon = $('#conf-loader')
 		@configMenu = $('#conf-setup-menu ul')
 		@secondaryMenu = $('#conf-setup-secondary-menu ul')
@@ -20,6 +19,10 @@ class BikeConf
 		@images_path = 'images/parts/'
 		@loadingNow = 0
 		@automatedScale()
+
+	restoreDefault: ->
+		@initBike( @dataSet.left_elements )
+		@initBike( @dataSet.right_elements )
 
 	calculatePrice: ->
 		sum = 0.0	
@@ -68,27 +71,41 @@ class BikeConf
 		@initBike( @dataSet.right_elements )
 		@scaleApp()
 		@calculatePrice()
+		$('#conf-submit-bar .clear').click (event) =>
+			event.preventDefault()
+			@restoreDefault()
 
 	prepareColorSelector: (elementSet, index) ->
 		element = elementSet.types[index]
+		currentColor = parseInt($('#conf-'+elementSet.sys_name).attr('data-color'))
 		@elementTypeLabel.text( element.name )
 		@colorSelector.html('')
+		i = 0
 		for color in element.colors
-			@colorSelector.append @prepareColorButton(elementSet, color)
+			if i == currentColor
+				@colorSelector.append @prepareColorButton(elementSet, color, i, 'active')
+			else
+				@colorSelector.append @prepareColorButton(elementSet, color, i, '')
+			i++
 
-	prepareColorButton: (elementSet, color) ->
-		selector = $('<li><a href="#"><img src="images/colors/'+color.name+'.png" /></a></li>')
+	prepareColorButton: (elementSet, color, i, css_class) ->
+		selector = $('<li class="'+css_class+'"><a href="#"><img src="images/colors/'+color.name+'.png" /></a></li>')
 		selector.click( (event) => 
 			event.preventDefault()
 			imageSrc = @images_path + color.file
 			@changeImage( elementSet.sys_name, imageSrc )
 			$('#conf-'+elementSet.sys_name).attr('data-price', color.price)	
+			$('#conf-'+elementSet.sys_name).attr('data-color', i)	
+			$('#conf-element-color-selector li.active').removeClass('active')
+			selector.addClass('active')
 		)
 
 	initBike: (elementsMap) ->
 		for element in elementsMap
-			imageSrc = @images_path + element.types[0].colors[0].file
-			$('#conf-'+element.sys_name).attr('data-price', element.types[0].colors[0].price)
+			color = @defaultBike[element.sys_name]
+			imageSrc = @images_path + element.types[0].colors[color].file
+			$('#conf-'+element.sys_name).attr('data-price', element.types[0].colors[color].price)
+			$('#conf-'+element.sys_name).attr('data-color', color)
 			@createImage( element.sys_name, imageSrc )
 
 	createImage: (elementName, imageSrc) ->
@@ -172,6 +189,7 @@ class BikeConf
 			label.addClass('active')
 			@prepareColorSelector(element, elementIndex)
 			@calculatePrice()
+			$('#conf-'+element.sys_name).attr('data-color', 0)
 		)
 		# right arrow
 		rightarrow.click( (event) =>
@@ -191,6 +209,7 @@ class BikeConf
 			label.addClass('active')
 			@prepareColorSelector(element,elementIndex)
 			@calculatePrice()
+			$('#conf-'+element.sys_name).attr('data-color', 0)
 		)
 		container.append leftarrow
 		container.append label

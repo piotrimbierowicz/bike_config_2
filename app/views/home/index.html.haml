@@ -3,6 +3,8 @@
 		%li#conf-loader Ładowanie...
 
 #conf-bike
+	#conf-background.conf-element
+		%img{:src => 'images/parts/tlo.png'}
 	#conf-rtyr.conf-element
 		%img
 	#conf-ftyr.conf-element
@@ -71,14 +73,14 @@
 			%br
 			%span Kwota zawiera podatek vat 23%
 		%p.price 
-			%span 1234,56 
+			%span
 			zł
 
 	.clearfix
 
 #conf-submit-bar
 	%a.submit Kupuję
-	%a.clear Wyczyść
+	%a.clear{:href=>'#'} Wyczyść
 	%a.twitter Twitter
 	%a.facebook Facebook
 	.clearfix
