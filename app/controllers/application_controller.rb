@@ -15,46 +15,46 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Damka - stalowa', 
 					:colors => [
-						{:file => 'damka-biala.png', :name => 'white', :price => 4843},
-						{:file => 'damka-czarna.png', :name => 'black', :price => 4843},
-						{:file => 'damka-1021.png', :name => '1021', :price => 4843},
-						{:file => 'damka-2009.png', :name => '2009', :price => 4843},
-						{:file => 'damka-czerwona.png', :name => 'red', :price => 4843},
-						{:file => 'damka-6018.png', :name => '6018', :price => 4843},
-						{:file => 'damka-5015.png', :name => '5015', :price => 4843},
-						{:file => 'damka-4005.png', :name => '4005', :price => 4843},
-						{:file => 'damka-3027.png', :name => '3027', :price => 4843},
-						{:file => 'damka-6027.png', :name => '6027', :price => 4843}
+						{:file => 'damka-biala.png', :name => 'white', :price => 0},
+						{:file => 'damka-czarna.png', :name => 'black', :price => 0},
+						{:file => 'damka-1021.png', :name => '1021', :price => 0},
+						{:file => 'damka-2009.png', :name => '2009', :price => 0},
+						{:file => 'damka-czerwona.png', :name => 'red', :price => 0},
+						{:file => 'damka-6018.png', :name => '6018', :price => 0},
+						{:file => 'damka-5015.png', :name => '5015', :price => 0},
+						{:file => 'damka-4005.png', :name => '4005', :price => 0},
+						{:file => 'damka-3027.png', :name => '3027', :price => 0},
+						{:file => 'damka-6027.png', :name => '6027', :price => 0}
 					] 
 				},
 				{ 
-					:name => 'Unisex', 
+					:name => 'Unisex - aluminiowa', 
 					:colors => [
-						{:file => 'rama-meska-biala.png', :name => 'white', :price => 4843},
-						{:file => 'rama-meska-czarna.png', :name => 'black', :price => 4843},
-						{:file => 'rama-meska-1021.png', :name => '1021', :price => 4843},
-						{:file => 'rama-meska-2009.png', :name => '2009', :price => 4843},
-						{:file => 'rama-meska-czerwona.png', :name => 'red', :price => 4843},
-						{:file => 'rama-meska-6018.png', :name => '6018', :price => 4843},
-						{:file => 'rama-meska-5015.png', :name => '5015', :price => 4843},
-						{:file => 'rama-meska-4005.png', :name => '4005', :price => 4843},
-						{:file => 'rama-meska-3027.png', :name => '3027', :price => 4843},
-						{:file => 'rama-meska-6027.png', :name => '6027', :price => 4843},
+						{:file => 'rama-meska-biala.png', :name => 'white', :price => 200},
+						{:file => 'rama-meska-czarna.png', :name => 'black', :price => 200},
+						{:file => 'rama-meska-1021.png', :name => '1021', :price => 200},
+						{:file => 'rama-meska-2009.png', :name => '2009', :price => 200},
+						{:file => 'rama-meska-czerwona.png', :name => 'red', :price => 200},
+						{:file => 'rama-meska-6018.png', :name => '6018', :price => 200},
+						{:file => 'rama-meska-5015.png', :name => '5015', :price => 200},
+						{:file => 'rama-meska-4005.png', :name => '4005', :price => 200},
+						{:file => 'rama-meska-3027.png', :name => '3027', :price => 200},
+						{:file => 'rama-meska-6027.png', :name => '6027', :price => 200},
 					] 
 				},
 				{ 
 					:name => 'Męska - stalowa', 
 					:colors => [
-						{:file => 'rama-meska-biala.png', :name => 'white', :price => 4843},
-						{:file => 'rama-meska-czarna.png', :name => 'black', :price => 4843},
-						{:file => 'rama-meska-1021.png', :name => '1021', :price => 4843},
-						{:file => 'rama-meska-2009.png', :name => '2009', :price => 4843},
-						{:file => 'rama-meska-3027.png', :name => '3027', :price => 4843},
-						{:file => 'rama-meska-4005.png', :name => '4005', :price => 4843},
-						{:file => 'rama-meska-5015.png', :name => '5015', :price => 4843},
-						{:file => 'rama-meska-6018.png', :name => '6018', :price => 4843},
-						{:file => 'rama-meska-6027.png', :name => '6027', :price => 4843},
-						{:file => 'rama-meska-czerwona.png', :name => 'red', :price => 4843}
+						{:file => 'rama-meska-biala.png', :name => 'white', :price => 0},
+						{:file => 'rama-meska-czarna.png', :name => 'black', :price => 0},
+						{:file => 'rama-meska-1021.png', :name => '1021', :price => 0},
+						{:file => 'rama-meska-2009.png', :name => '2009', :price => 0},
+						{:file => 'rama-meska-3027.png', :name => '3027', :price => 0},
+						{:file => 'rama-meska-4005.png', :name => '4005', :price => 0},
+						{:file => 'rama-meska-5015.png', :name => '5015', :price => 0},
+						{:file => 'rama-meska-6018.png', :name => '6018', :price => 0},
+						{:file => 'rama-meska-6027.png', :name => '6027', :price => 0},
+						{:file => 'rama-meska-czerwona.png', :name => 'red', :price => 0}
 					] 
 				}
 			]
@@ -68,14 +68,14 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Bębnowy', 
 					:colors => [ 
-						{ :file => 'hamulec-beben.png', :name => 'silver', :price => 44.83 }
+						{ :file => 'hamulec-beben.png', :name => 'silver', :price => 0 }
 					] 
 				},
 				{ 
 					:name => 'Zwykły', 
 					:colors => [
-						{ :file => 'hamulec-normalny-srebrny.png', :name => 'silver', :price => 44.83 }, 
-						{ :file => 'hamulec-normalny-czarny.png', :name => 'black', :price => 39.50 }
+						{ :file => 'hamulec-normalny-srebrny.png', :name => 'silver', :price => 0 }, 
+						{ :file => 'hamulec-normalny-czarny.png', :name => 'black', :price => 0 }
 					] 
 				}
 			]
@@ -88,16 +88,16 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Eko-skóra', 
 					:colors => [
-						{:file => 'chwyty-skora-biale.png', :name => 'white', :price => 85},
-						{:file => 'chwyty-czarne.png', :name => 'black', :price => 85},
-						{:file => 'chwyty-skora-brazowy.png', :name => 'brown', :price => 85}
+						{:file => 'chwyty-skora-biale.png', :name => 'white', :price => 0},
+						{:file => 'chwyty-czarne.png', :name => 'black', :price => 0},
+						{:file => 'chwyty-skora-brazowy.png', :name => 'brown', :price => 0}
 					] 
 				},
 				{ 
 					:name => 'Skórzane', 
 					:colors => [
-						{:file => 'chwyty-czarne.png', :name => 'black', :price => 150},
-						{:file => 'chwyty-skora-brazowy.png', :name => 'brown', :price => 150}
+						{:file => 'chwyty-czarne.png', :name => 'black', :price => 80},
+						{:file => 'chwyty-skora-brazowy.png', :name => 'brown', :price => 80}
 					] 
 				}
 			]
@@ -111,7 +111,7 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Jest', 
 					:colors => [
-						{ :file => 'koszyk.png', 'name' => 'transparent', :price => 217}
+						{ :file => 'koszyk.png', 'name' => 'transparent', :price => 0}
 					]
 				},
 				{
@@ -130,15 +130,15 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Pojedyncza',
 					:colors => [
-						{ :file => 'nozka-pojedyncza-srebrna.png', 'name' => 'silver', :price => 40},
-						{ :file => 'nozka-pojedyncza-czarna.png', 'name' => 'black', :price => 40}
+						{ :file => 'nozka-pojedyncza-srebrna.png', 'name' => 'silver', :price => 0},
+						{ :file => 'nozka-pojedyncza-czarna.png', 'name' => 'black', :price => 0}
 					]
 				},
 				{ 
 					:name => 'Podwójna',
 					:colors => [
-						{ :file => 'nozka-podwojna-srebrna.png', 'name' => 'silver', :price => 120},
-						{ :file => 'nozka-podwojna-czarna.png', 'name' => 'black', :price => 120}
+						{ :file => 'nozka-podwojna-srebrna.png', 'name' => 'silver', :price => 50},
+						{ :file => 'nozka-podwojna-czarna.png', 'name' => 'black', :price => 50}
 					]
 				}
 			]
@@ -151,24 +151,24 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => "Obszycie materiałowe", 
 					:colors => [
-						{:file => 'siodelko-fiolet.png', :name => 'siod_violet', :price => 121},
-						{:file => 'siodelko-czerwone.png', :name => 'siod_red', :price => 122}
+						{:file => 'siodelko-fiolet.png', :name => 'siod_violet', :price => 0},
+						{:file => 'siodelko-czerwone.png', :name => 'siod_red', :price => 0}
 					] 
 				},
 				{ 
 					:name => "Skóra", 
 					:colors => [
-						{:file => 'siodelko-czarne2.png', :name => 'siod_skor_nat_black', :price => 321},
-						{:file => 'siodelko-brazowe2.png', :name => 'siod_skor_nat_brown', :price => 322}
+						{:file => 'siodelko-czarne2.png', :name => 'siod_skor_nat_black', :price => 420},
+						{:file => 'siodelko-brazowe2.png', :name => 'siod_skor_nat_brown', :price => 420}
 					] 
 				},
 				{ 
 					:name => "Eko-skóra", 
 					:colors => [
-						{:file => 'siodelko-czarne.png', :name => 'siod_skor_black', :price => 221},
-						{:file => 'siodelko-czarne3.png', :name => 'black', :price => 222},
-						{:file => 'siodelko-brazowe.png', :name => 'siod_skor_brown', :price => 222},
-						{:file => 'siodelko-szare.png', :name => 'steel', :price => 222}
+						{:file => 'siodelko-czarne.png', :name => 'siod_skor_black', :price => 0},
+						{:file => 'siodelko-czarne3.png', :name => 'black', :price => 0},
+						{:file => 'siodelko-brazowe.png', :name => 'siod_skor_brown', :price => 0},
+						{:file => 'siodelko-szare.png', :name => 'steel', :price => 0}
 					] 
 				},
 			]
@@ -181,11 +181,11 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Opona przednia', 
 					:colors => [
-						{ :file => 'opona-p-biala.png', :name => 'white', :price => 124},
-						{ :file => 'opona-p-bez.png', :name => 'beige', :price => 124},
-						{ :file => 'opona-p-czarna.png', :name => 'black', :price => 109},
-						{ :file => 'opona-p-cz-biel.png', :name => 'blackwhite', :price => 109},
-						{ :file => 'opona-p-cz-bez.png', :name => 'blackbeige', :price => 109}
+						{ :file => 'opona-p-biala.png', :name => 'white', :price => 0},
+						{ :file => 'opona-p-bez.png', :name => 'beige', :price => 0},
+						{ :file => 'opona-p-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'opona-p-cz-biel.png', :name => 'blackwhite', :price => 0},
+						{ :file => 'opona-p-cz-bez.png', :name => 'blackbeige', :price => 0}
 					] 
 				}
 			]
@@ -198,11 +198,11 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Opona tylnia',
 					:colors => [
-						{ :file => 'opona-t-biala.png', :name => 'white', :price => 124},
-						{ :file => 'opona-t-bez.png', :name => 'beige', :price => 124},
-						{ :file => 'opona-t-czarny.png', :name => 'black', :price => 109},
-						{ :file => 'opona-t-cz-biel.png', :name => 'blackwhite', :price => 109},
-						{ :file => 'opona-t-cz-bez.png', :name => 'blackbeige', :price => 109}
+						{ :file => 'opona-t-biala.png', :name => 'white', :price => 0},
+						{ :file => 'opona-t-bez.png', :name => 'beige', :price => 0},
+						{ :file => 'opona-t-czarny.png', :name => 'black', :price => 0},
+						{ :file => 'opona-t-cz-biel.png', :name => 'blackwhite', :price => 0},
+						{ :file => 'opona-t-cz-bez.png', :name => 'blackbeige', :price => 0}
 					] 
 				}
 			]
@@ -215,16 +215,16 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Widelec', 
 					:colors => [
-						{ :file => 'widelec-b-bialy.png', :name => 'white', :price => 544},
-						{ :file => 'widelec-b-czarny.png', :name => 'black', :price => 544},
-						{ :file => 'widelec-b-1021.png', :name => '1021', :price => 544},
-						{ :file => 'widelec-b-2009.png', :name => '2009', :price => 544},
-						{ :file => 'widelec-b-3027.png', :name => '3027', :price => 544},
-						{ :file => 'widelec-b-4005.png', :name => '4005', :price => 544},
-						{ :file => 'widelec-b-5015.png', :name => '5015', :price => 544},
-						{ :file => 'widelec-b-6018.png', :name => '6018', :price => 544},
-						{ :file => 'widelec-b-6027.png', :name => '6027', :price => 544},
-						{ :file => 'widelec-b-czerwony.png', :name => 'red', :price => 544}
+						{ :file => 'widelec-b-bialy.png', :name => 'white', :price => 0},
+						{ :file => 'widelec-b-czarny.png', :name => 'black', :price => 0},
+						{ :file => 'widelec-b-1021.png', :name => '1021', :price => 0},
+						{ :file => 'widelec-b-2009.png', :name => '2009', :price => 0},
+						{ :file => 'widelec-b-3027.png', :name => '3027', :price => 0},
+						{ :file => 'widelec-b-4005.png', :name => '4005', :price => 0},
+						{ :file => 'widelec-b-5015.png', :name => '5015', :price => 0},
+						{ :file => 'widelec-b-6018.png', :name => '6018', :price => 0},
+						{ :file => 'widelec-b-6027.png', :name => '6027', :price => 0},
+						{ :file => 'widelec-b-czerwony.png', :name => 'red', :price => 0}
 					] 
 				}
 			]
@@ -238,16 +238,16 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Korba', 
 					:colors => [
-						{ :file => 'korba-biala.png', :name => 'white', :price => 544},
-						{ :file => 'korba-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'korba-1021.png', :name => '1021', :price => 544},
-						{ :file => 'korba-2009.png', :name => '2009', :price => 544},
-						{ :file => 'korba-czerwona.png', :name => 'red', :price => 544},
-						{ :file => 'korba-6018.png', :name => '6018', :price => 544},
-						{ :file => 'korba-5015.png', :name => '5015', :price => 544},
-						{ :file => 'korba-4005.png', :name => '4005', :price => 544},
-						{ :file => 'korba-3027.png', :name => '3027', :price => 544},
-						{ :file => 'korba-6027.png', :name => '6027', :price => 544}
+						{ :file => 'korba-biala.png', :name => 'white', :price => 0},
+						{ :file => 'korba-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'korba-1021.png', :name => '1021', :price => 0},
+						{ :file => 'korba-2009.png', :name => '2009', :price => 0},
+						{ :file => 'korba-czerwona.png', :name => 'red', :price => 0},
+						{ :file => 'korba-6018.png', :name => '6018', :price => 0},
+						{ :file => 'korba-5015.png', :name => '5015', :price => 0},
+						{ :file => 'korba-4005.png', :name => '4005', :price => 0},
+						{ :file => 'korba-3027.png', :name => '3027', :price => 0},
+						{ :file => 'korba-6027.png', :name => '6027', :price => 0}
 					] 
 				}
 			]
@@ -261,17 +261,17 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Osłona łańcucha', 
 					:colors => [
-						{ :file => 'oslona-biala.png', :name => 'white', :price => 544},
-						{ :file => 'oslona-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'oslona-1021.png', :name => '1021', :price => 544},
-						{ :file => 'oslona-2009.png', :name => '2009', :price => 544},
-						{ :file => 'oslona-3027.png', :name => '3027', :price => 544},
-						{ :file => 'oslona-4005.png', :name => '4005', :price => 544},
-						{ :file => 'oslona-5015.png', :name => '5015', :price => 544},
-						{ :file => 'oslona-6018.png', :name => '6018', :price => 544},
-						{ :file => 'oslona-6027.png', :name => '6027', :price => 544},
-						{ :file => 'oslona-czerw.png', :name => 'red', :price => 544},
-						{ :file => 'oslona-chrom.png', :name => 'chrom', :price => 544}
+						{ :file => 'oslona-biala.png', :name => 'white', :price => 0},
+						{ :file => 'oslona-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'oslona-1021.png', :name => '1021', :price => 0},
+						{ :file => 'oslona-2009.png', :name => '2009', :price => 0},
+						{ :file => 'oslona-3027.png', :name => '3027', :price => 0},
+						{ :file => 'oslona-4005.png', :name => '4005', :price => 0},
+						{ :file => 'oslona-5015.png', :name => '5015', :price => 0},
+						{ :file => 'oslona-6018.png', :name => '6018', :price => 0},
+						{ :file => 'oslona-6027.png', :name => '6027', :price => 0},
+						{ :file => 'oslona-czerw.png', :name => 'red', :price => 0},
+						{ :file => 'oslona-chrom.png', :name => 'chrom', :price => 0}
 					] 
 				}
 			]
@@ -285,33 +285,33 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Stalowa', 
 					:colors => [
-						{ :file => 'kierownica-biala.png', :name => 'white', :price => 544},
-						{ :file => 'kierownica-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'kierownica-1021.png', :name => '1021', :price => 544},
-						{ :file => 'kierownica-2009.png', :name => '2009', :price => 544},
-						{ :file => 'kierownica-czerw.png', :name => 'red', :price => 544},
-						{ :file => 'kierownica-6018.png', :name => '6018', :price => 544},
-						{ :file => 'kierownica-5015.png', :name => '5015', :price => 544},
-						{ :file => 'kierownica-4005.png', :name => '4005', :price => 544},
-						{ :file => 'kierownica-3027.png', :name => '3027', :price => 544},
-						{ :file => 'kierownica-6027.png', :name => '6027', :price => 544},
-						{ :file => 'kierownica-chrom.png', :name => 'chrom', :price => 544}
+						{ :file => 'kierownica-biala.png', :name => 'white', :price => 0},
+						{ :file => 'kierownica-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'kierownica-1021.png', :name => '1021', :price => 0},
+						{ :file => 'kierownica-2009.png', :name => '2009', :price => 0},
+						{ :file => 'kierownica-czerw.png', :name => 'red', :price => 0},
+						{ :file => 'kierownica-6018.png', :name => '6018', :price => 0},
+						{ :file => 'kierownica-5015.png', :name => '5015', :price => 0},
+						{ :file => 'kierownica-4005.png', :name => '4005', :price => 0},
+						{ :file => 'kierownica-3027.png', :name => '3027', :price => 0},
+						{ :file => 'kierownica-6027.png', :name => '6027', :price => 0},
+						{ :file => 'kierownica-chrom.png', :name => 'chrom', :price => 0}
 					] 
 				},
 				{
 					:name => 'Aluminiowa', 
 					:colors => [
-						{ :file => 'kierownica-biala.png', :name => 'white', :price => 544},
-						{ :file => 'kierownica-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'kierownica-1021.png', :name => '1021', :price => 544},
-						{ :file => 'kierownica-2009.png', :name => '2009', :price => 544},
-						{ :file => 'kierownica-czerw.png', :name => 'red', :price => 544},
-						{ :file => 'kierownica-6018.png', :name => '6018', :price => 544},
-						{ :file => 'kierownica-5015.png', :name => '5015', :price => 544},
-						{ :file => 'kierownica-4005.png', :name => '4005', :price => 544},
-						{ :file => 'kierownica-3027.png', :name => '3027', :price => 544},
-						{ :file => 'kierownica-6027.png', :name => '6027', :price => 544},
-						{ :file => 'kierownica-chrom.png', :name => 'chrom', :price => 544}
+						{ :file => 'kierownica-biala.png', :name => 'white', :price => 50},
+						{ :file => 'kierownica-czarna.png', :name => 'black', :price => 50},
+						{ :file => 'kierownica-1021.png', :name => '1021', :price => 50},
+						{ :file => 'kierownica-2009.png', :name => '2009', :price => 50},
+						{ :file => 'kierownica-czerw.png', :name => 'red', :price => 50},
+						{ :file => 'kierownica-6018.png', :name => '6018', :price => 50},
+						{ :file => 'kierownica-5015.png', :name => '5015', :price => 50},
+						{ :file => 'kierownica-4005.png', :name => '4005', :price => 50},
+						{ :file => 'kierownica-3027.png', :name => '3027', :price => 50},
+						{ :file => 'kierownica-6027.png', :name => '6027', :price => 50},
+						{ :file => 'kierownica-chrom.png', :name => 'chrom', :price => 50}
 					] 
 				}
 			]
@@ -325,17 +325,17 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Błotnik przedni', 
 					:colors => [
-						{ :file => 'blotnik-p-bialy.png', :name => 'white', :price => 544},
-						{ :file => 'blotnik-p-czarny.png', :name => 'black', :price => 544},
-						{ :file => 'blotnik-p-1021.png', :name => '1021', :price => 544},
-						{ :file => 'blotnik-p-2009.png', :name => '2009', :price => 544},
-						{ :file => 'blotnik-p-3027.png', :name => '3027', :price => 544},
-						{ :file => 'blotnik-p-4005.png', :name => '4005', :price => 544},
-						{ :file => 'blotnik-p-5015.png', :name => '5015', :price => 544},
-						{ :file => 'blotnik-p-6018.png', :name => '6018', :price => 544},
-						{ :file => 'blotnik-p-6027.png', :name => '6027', :price => 544},
-						{ :file => 'blotnik-p-czerwony.png', :name => 'red', :price => 544},
-						{ :file => 'blotnik-p-chrom.png', :name => 'chrom', :price => 544}
+						{ :file => 'blotnik-p-bialy.png', :name => 'white', :price => 0},
+						{ :file => 'blotnik-p-czarny.png', :name => 'black', :price => 0},
+						{ :file => 'blotnik-p-1021.png', :name => '1021', :price => 0},
+						{ :file => 'blotnik-p-2009.png', :name => '2009', :price => 0},
+						{ :file => 'blotnik-p-3027.png', :name => '3027', :price => 0},
+						{ :file => 'blotnik-p-4005.png', :name => '4005', :price => 0},
+						{ :file => 'blotnik-p-5015.png', :name => '5015', :price => 0},
+						{ :file => 'blotnik-p-6018.png', :name => '6018', :price => 0},
+						{ :file => 'blotnik-p-6027.png', :name => '6027', :price => 0},
+						{ :file => 'blotnik-p-czerwony.png', :name => 'red', :price => 0},
+						{ :file => 'blotnik-p-chrom.png', :name => 'chrom', :price => 0}
 					] 
 				}
 			]
@@ -349,17 +349,17 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Błotnik tylny', 
 					:colors => [
-						{ :file => 'blotnik-t-bialy.png', :name => 'white', :price => 544},
-						{ :file => 'blotnik-t-czarny.png', :name => 'black', :price => 544},
-						{ :file => 'blotnik-t-1021.png', :name => '1021', :price => 544},
-						{ :file => 'blotnik-t-2009.png', :name => '2009', :price => 544},
-						{ :file => 'blotnik-t-3027.png', :name => '3027', :price => 544},
-						{ :file => 'blotnik-t-4005.png', :name => '4005', :price => 544},
-						{ :file => 'blotnik-t-5015.png', :name => '5015', :price => 544},
-						{ :file => 'blotnik-t-6018.png', :name => '6018', :price => 544},
-						{ :file => 'blotnik-t-6027.png', :name => '6027', :price => 544},
-						{ :file => 'blotnik-t-czerwony.png', :name => 'red', :price => 544},
-						{ :file => 'blotnik-t-chrom.png', :name => 'chrom', :price => 544}
+						{ :file => 'blotnik-t-bialy.png', :name => 'white', :price => 0},
+						{ :file => 'blotnik-t-czarny.png', :name => 'black', :price => 0},
+						{ :file => 'blotnik-t-1021.png', :name => '1021', :price => 0},
+						{ :file => 'blotnik-t-2009.png', :name => '2009', :price => 0},
+						{ :file => 'blotnik-t-3027.png', :name => '3027', :price => 0},
+						{ :file => 'blotnik-t-4005.png', :name => '4005', :price => 0},
+						{ :file => 'blotnik-t-5015.png', :name => '5015', :price => 0},
+						{ :file => 'blotnik-t-6018.png', :name => '6018', :price => 0},
+						{ :file => 'blotnik-t-6027.png', :name => '6027', :price => 0},
+						{ :file => 'blotnik-t-czerwony.png', :name => 'red', :price => 0},
+						{ :file => 'blotnik-t-chrom.png', :name => 'chrom', :price => 0}
 					] 
 				}
 			]
@@ -373,11 +373,11 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Łańcuch', 
 					:colors => [
-						{ :file => 'lancuch-bialy.png', :name => 'white', :price => 544},
-						{ :file => 'lancuch-czerwony.png', :name => 'red', :price => 544},
-						{ :file => 'lancuch-fiolet.png', :name => 'lanc_violet', :price => 544},
-						{ :file => 'lancuch-stalowy.png', :name => 'steel', :price => 544},
-						{ :file => 'lancuch-zielony.png', :name => 'lang_green', :price => 544}
+						{ :file => 'lancuch-bialy.png', :name => 'white', :price => 0},
+						{ :file => 'lancuch-czerwony.png', :name => 'red', :price => 0},
+						{ :file => 'lancuch-fiolet.png', :name => 'lanc_violet', :price => 0},
+						{ :file => 'lancuch-stalowy.png', :name => 'steel', :price => 0},
+						{ :file => 'lancuch-zielony.png', :name => 'lang_green', :price => 0}
 					] 
 				}
 			]
@@ -391,15 +391,15 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Zwykły', 
 					:colors => [
-						{ :file => 'mostek-srebrny.png', :name => 'silver', :price => 544},
-						{ :file => 'mostek-czarny.png', :name => 'black', :price => 544}
+						{ :file => 'mostek-srebrny.png', :name => 'silver', :price => 0},
+						{ :file => 'mostek-czarny.png', :name => 'black', :price => 0}
 					] 
 				},
 				{
 					:name => 'Regulowany', 
 					:colors => [
-						{ :file => 'mostek-srebrny.png', :name => 'silver', :price => 544},
-						{ :file => 'mostek-czarny.png', :name => 'black', :price => 544}
+						{ :file => 'mostek-srebrny.png', :name => 'silver', :price => 50},
+						{ :file => 'mostek-czarny.png', :name => 'black', :price => 50}
 					] 
 				}
 			]
@@ -413,16 +413,16 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Obręcz przednia', 
 					:colors => [
-						{ :file => 'obrecz-p-biala.png', :name => 'white', :price => 544},
-						{ :file => 'obrecz-p-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'obrecz-p-1021.png', :name => '1021', :price => 544},
-						{ :file => 'obrecz-p-2009.png', :name => '2009', :price => 544},
-						{ :file => 'obrecz-p-czerw.png', :name => 'red', :price => 544},
-						{ :file => 'obrecz-p-6018.png', :name => '6018', :price => 544},
-						{ :file => 'obrecz-p-5015.png', :name => '5015', :price => 544},
-						{ :file => 'obrecz-p-4005.png', :name => '4005', :price => 544},
-						{ :file => 'obrecz-p-3027.png', :name => '3027', :price => 544},
-						{ :file => 'obrecz-p-6027.png', :name => '6027', :price => 544}
+						{ :file => 'obrecz-p-biala.png', :name => 'white', :price => 0},
+						{ :file => 'obrecz-p-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'obrecz-p-1021.png', :name => '1021', :price => 0},
+						{ :file => 'obrecz-p-2009.png', :name => '2009', :price => 0},
+						{ :file => 'obrecz-p-czerw.png', :name => 'red', :price => 0},
+						{ :file => 'obrecz-p-6018.png', :name => '6018', :price => 0},
+						{ :file => 'obrecz-p-5015.png', :name => '5015', :price => 0},
+						{ :file => 'obrecz-p-4005.png', :name => '4005', :price => 0},
+						{ :file => 'obrecz-p-3027.png', :name => '3027', :price => 0},
+						{ :file => 'obrecz-p-6027.png', :name => '6027', :price => 0}
 					] 
 				}
 			]
@@ -436,16 +436,16 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Obręcz tylnia', 
 					:colors => [
-						{ :file => 'obrecz-t-biala.png', :name => 'white', :price => 544},
-						{ :file => 'obrecz-t-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'obrecz-t-1021.png', :name => '1021', :price => 544},
-						{ :file => 'obrecz-t-2009.png', :name => '2009', :price => 544},
-						{ :file => 'obrecz-t-czerw.png', :name => 'red', :price => 544},
-						{ :file => 'obrecz-t-6018.png', :name => '6018', :price => 544},
-						{ :file => 'obrecz-t-5015.png', :name => '5015', :price => 544},
-						{ :file => 'obrecz-t-4005.png', :name => '4005', :price => 544},
-						{ :file => 'obrecz-t-6027.png', :name => '6027', :price => 544},
-						{ :file => 'obrecz-t-3027.png', :name => '3027', :price => 544}
+						{ :file => 'obrecz-t-biala.png', :name => 'white', :price => 0},
+						{ :file => 'obrecz-t-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'obrecz-t-1021.png', :name => '1021', :price => 0},
+						{ :file => 'obrecz-t-2009.png', :name => '2009', :price => 0},
+						{ :file => 'obrecz-t-czerw.png', :name => 'red', :price => 0},
+						{ :file => 'obrecz-t-6018.png', :name => '6018', :price => 0},
+						{ :file => 'obrecz-t-5015.png', :name => '5015', :price => 0},
+						{ :file => 'obrecz-t-4005.png', :name => '4005', :price => 0},
+						{ :file => 'obrecz-t-6027.png', :name => '6027', :price => 0},
+						{ :file => 'obrecz-t-3027.png', :name => '3027', :price => 0}
 					] 
 				}
 			]
@@ -459,8 +459,8 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Pancerz', 
 					:colors => [
-						{ :file => 'pancerz-bialy.png', :name => 'white', :price => 544},
-						{ :file => 'pancerz-czarny.png', :name => 'black', :price => 544}
+						{ :file => 'pancerz-bialy.png', :name => 'white', :price => 0},
+						{ :file => 'pancerz-czarny.png', :name => 'black', :price => 0}
 					] 
 				}
 			]
@@ -474,8 +474,8 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Stery', 
 					:colors => [
-						{ :file => 'stery-czarne.png', :name => 'black', :price => 544},
-						{ :file => 'stery-srebrne.png', :name => 'silver', :price => 544}
+						{ :file => 'stery-czarne.png', :name => 'black', :price => 0},
+						{ :file => 'stery-srebrne.png', :name => 'silver', :price => 0}
 					] 
 				}
 			]
@@ -489,8 +489,8 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Sztyca', 
 					:colors => [
-						{ :file => 'sztyca-czarna.png', :name => 'black', :price => 544},
-						{ :file => 'sztyca-srebrna.png', :name => 'silver', :price => 544}
+						{ :file => 'sztyca-czarna.png', :name => 'black', :price => 0},
+						{ :file => 'sztyca-srebrna.png', :name => 'silver', :price => 0}
 					] 
 				}
 			]
@@ -504,8 +504,8 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Szprychy przednie', 
 					:colors => [
-						{ :file => 'szprychy-p-czarne.png', :name => 'black', :price => 544},
-						{ :file => 'szprychy-p-srebrne.png', :name => 'silver', :price => 544}
+						{ :file => 'szprychy-p-czarne.png', :name => 'black', :price => 0},
+						{ :file => 'szprychy-p-srebrne.png', :name => 'silver', :price => 0}
 					] 
 				}
 			]
@@ -519,8 +519,8 @@ class ApplicationController < ActionController::Base
 				{
 					:name => 'Szprychy tylnie', 
 					:colors => [
-						{ :file => 'szprychy-t-czarne.png', :name => 'black', :price => 544},
-						{ :file => 'szprychy-t-srebrne.png', :name => 'silver', :price => 544}
+						{ :file => 'szprychy-t-czarne.png', :name => 'black', :price => 0},
+						{ :file => 'szprychy-t-srebrne.png', :name => 'silver', :price => 0}
 					] 
 				}
 			]
@@ -533,8 +533,8 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Lampa', 
 					:colors => [
-						{:file => 'lampa-czarna.png', :name => 'black', :price => 232},
-						{:file => 'lampa-srebrna.png', :name => 'chrom', :price => 294}
+						{:file => 'lampa-czarna.png', :name => 'black', :price => 0},
+						{:file => 'lampa-srebrna.png', :name => 'chrom', :price => 0}
 					] 
 				}
 			]
