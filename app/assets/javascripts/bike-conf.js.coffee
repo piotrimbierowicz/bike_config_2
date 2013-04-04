@@ -23,6 +23,7 @@ class BikeConf
 	restoreDefault: ->
 		@initBike( @dataSet.left_elements )
 		@initBike( @dataSet.right_elements )
+		@calculatePrice()
 
 	calculatePrice: ->
 		sum = 0.0	
