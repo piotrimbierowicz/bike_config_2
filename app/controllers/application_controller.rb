@@ -377,7 +377,7 @@ class ApplicationController < ActionController::Base
 						{ :file => 'lancuch-czerwony.png', :name => 'red', :price => 0},
 						{ :file => 'lancuch-fiolet.png', :name => 'lanc_violet', :price => 0},
 						{ :file => 'lancuch-stalowy.png', :name => 'steel', :price => 0},
-						{ :file => 'lancuch-zielony.png', :name => 'lang_green', :price => 0}
+						{ :file => 'lancuch-zielony.png', :name => 'lanc_green', :price => 0}
 					] 
 				}
 			]
