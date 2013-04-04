@@ -15,16 +15,16 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Damka - stalowa', 
 					:colors => [
-						{:file => 'damka-biala.png', :name => 'white', :price => 0},
-						{:file => 'damka-czarna.png', :name => 'black', :price => 0},
-						{:file => 'damka-1021.png', :name => '1021', :price => 0},
-						{:file => 'damka-2009.png', :name => '2009', :price => 0},
-						{:file => 'damka-czerwona.png', :name => 'red', :price => 0},
-						{:file => 'damka-6018.png', :name => '6018', :price => 0},
-						{:file => 'damka-5015.png', :name => '5015', :price => 0},
-						{:file => 'damka-4005.png', :name => '4005', :price => 0},
-						{:file => 'damka-3027.png', :name => '3027', :price => 0},
-						{:file => 'damka-6027.png', :name => '6027', :price => 0}
+						{:file => 'rama-damka-biala.png', :name => 'white', :price => 0},
+						{:file => 'rama-damka-czarna.png', :name => 'black', :price => 0},
+						{:file => 'rama-damka-1021.png', :name => '1021', :price => 0},
+						{:file => 'rama-damka-2009.png', :name => '2009', :price => 0},
+						{:file => 'rama-damka-czerwona.png', :name => 'red', :price => 0},
+						{:file => 'rama-damka-6018.png', :name => '6018', :price => 0},
+						{:file => 'rama-damka-5015.png', :name => '5015', :price => 0},
+						{:file => 'rama-damka-4005.png', :name => '4005', :price => 0},
+						{:file => 'rama-damka-3027.png', :name => '3027', :price => 0},
+						{:file => 'rama-damka-6027.png', :name => '6027', :price => 0}
 					] 
 				},
 				{ 
