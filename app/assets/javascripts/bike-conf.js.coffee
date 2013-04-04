@@ -3,7 +3,7 @@ window.ConfLoadingNow = 0
 class BikeConf
 
 	constructor: ->
-		@hamulecBeben = true
+		@hamulecBeben = false
 		@orginalPartWidth = 1000
 		@orginalPartHeight = 655
 		@minPartWidth = @currentPartWidth = 500
@@ -28,6 +28,8 @@ class BikeConf
 			$('#conf-wide img').attr('src', $('#conf-wide img').attr('src').replace('q','v'))
 
 	updatePancerze: ->
+		if @hamulecBeben
+			$('#conf-panc img').attr('src', $('#conf-panc img').attr('src').replace('bialy','czarny'))
 
 	restoreDefault: ->
 		@initBike( @dataSet.left_elements )
@@ -91,12 +93,19 @@ class BikeConf
 		@elementTypeLabel.text( element.name )
 		@colorSelector.html('')
 		i = 0
-		for color in element.colors
-			if i == currentColor
-				@colorSelector.append @prepareColorButton(elementSet, color, i, 'active')
-			else
-				@colorSelector.append @prepareColorButton(elementSet, color, i, '')
-			i++
+		if @hamulecBeben and elementSet.sys_name == 'panc'
+			for color in element.colors
+				if i == 1
+					@colorSelector.append @prepareColorButton(elementSet, color, i, 'active')
+				i++
+
+		else
+			for color in element.colors
+				if i == currentColor
+					@colorSelector.append @prepareColorButton(elementSet, color, i, 'active')
+				else
+					@colorSelector.append @prepareColorButton(elementSet, color, i, '')
+				i++
 
 	prepareColorButton: (elementSet, color, i, css_class) ->
 		selector = $('<li class="'+css_class+'"><a href="#"><img src="images/colors/'+color.name+'.png" /></a></li>')
@@ -196,7 +205,7 @@ class BikeConf
 			if(elementIndex == -1)
 				elementIndex = element.types.length - 1
 
-			if element.sys_name == 'hamu' and elementIndex == 0
+			if element.sys_name == 'hamu' and elementIndex == 1
 				@hamulecBeben = true
 				@updateHamulec()
 				@updatePancerze()
@@ -225,7 +234,7 @@ class BikeConf
 				elementIndex = 0
 			if(elementIndex == -1)
 				elementIndex = element.types.length - 1
-			if element.sys_name == 'hamu' and elementIndex == 0
+			if element.sys_name == 'hamu' and elementIndex == 1
 				@hamulecBeben = true
 				@updateHamulec()
 				@updatePancerze()

@@ -66,16 +66,16 @@ class ApplicationController < ActionController::Base
 			:sys_name => 'hamu', 
 			:types => [ 
 				{ 
-					:name => 'Bębnowy', 
-					:colors => [ 
-						{ :file => 'hamulec-beben.png', :name => 'silver', :price => 0 }
-					] 
-				},
-				{ 
 					:name => 'Zwykły', 
 					:colors => [
 						{ :file => 'hamulec-normalny-srebrny.png', :name => 'silver', :price => 0 }, 
 						{ :file => 'hamulec-normalny-czarny.png', :name => 'black', :price => 0 }
+					] 
+				},
+				{ 
+					:name => 'Bębnowy', 
+					:colors => [ 
+						{ :file => 'hamulec-beben.png', :name => 'silver', :price => 0 }
 					] 
 				}
 			]
