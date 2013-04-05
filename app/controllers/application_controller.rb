@@ -75,7 +75,7 @@ class ApplicationController < ActionController::Base
 				{ 
 					:name => 'Bębnowy', 
 					:colors => [ 
-						{ :file => 'hamulec-beben.png', :name => 'silver', :price => 0 }
+						{ :file => 'hamulec-beben.png', :name => 'silver', :price => 200 }
 					] 
 				}
 			]

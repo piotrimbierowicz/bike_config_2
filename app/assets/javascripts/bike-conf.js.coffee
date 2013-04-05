@@ -213,7 +213,7 @@ class BikeConf
 				@hamulecBeben = true
 				@updateHamulec()
 				@updatePancerze()
-			else 
+			else if element.sys_name == 'hamu'
 				@hamulecBeben = false
 				@updateHamulec()
 				@updatePancerze()	
@@ -244,7 +244,7 @@ class BikeConf
 				@hamulecBeben = true
 				@updateHamulec()
 				@updatePancerze()
-			else 
+			else if element.sys_name == 'hamu' 
 				@hamulecBeben = false
 				@updateHamulec()
 				@updatePancerze()
