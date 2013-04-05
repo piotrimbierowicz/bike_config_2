@@ -31,6 +31,7 @@ class BikeConf
 	updatePancerze: ->
 		if @hamulecBeben
 			$('#conf-panc img').attr('src', $('#conf-panc img').attr('src').replace('bialy','czarny'))
+			$('#conf-panc').attr('data-color', 1)
 
 	restoreDefault: ->
 		@initBike( @dataSet.left_elements )
