@@ -81,6 +81,27 @@ class ApplicationController < ActionController::Base
 			]
 		}
 		left_elements.append hamulec
+
+		pedaly = { 
+			:full_name => 'Pedały', 
+			:sys_name => 'peda', 
+			:types => [ 
+				{ 
+					:name => 'Plastikowe', 
+					:colors => [
+						{ :file => 'transparent.png', :name => 'black', :price => 0 }
+					] 
+				},
+				{ 
+					:name => 'Aluminiowe', 
+					:colors => [ 
+						{ :file => 'transparent.png', :name => 'black', :price => 50 }
+					] 
+				}
+			]
+		}
+		left_elements.append pedaly
+
 		chwyty = {
 			:full_name => 'Chwyty',
 			:sys_name => 'chwy',
@@ -109,20 +130,20 @@ class ApplicationController < ActionController::Base
 			:sys_name => 'bask',
 			:types => [
 				{
-					:name => 'Jest', 
+					:name => 'Nie ma',
 					:colors => [
-						{ :file => 'koszyk.png', 'name' => 'transparent', :price => 0}
+						{ :file => 'transparent.png', 'name' => 'white', :price => 0}
 					]
 				},
 				{
-					:name => 'Nie ma',
+					:name => 'Jest', 
 					:colors => [
-						{ :file => 'background.png', 'name' => 'transparent', :price => 0}
+						{ :file => 'koszyk.png', 'name' => 'white', :price => 99}
 					]
-				}
+				},
 			]
 		}
-		#left_elements.append koszyk
+		left_elements.append koszyk
 		nozka = {
 			:full_name => 'Nóżka',
 			:sys_name => 'nozk',
@@ -149,10 +170,10 @@ class ApplicationController < ActionController::Base
 			:sys_name => 'siod',
 			:types => [
 				{ 
-					:name => "Obszycie materiałowe", 
+					:name => "Eko-skóra", 
 					:colors => [
-						{:file => 'siodelko-fiolet.png', :name => 'siod_violet', :price => 0},
-						{:file => 'siodelko-czerwone.png', :name => 'siod_red', :price => 0}
+						{:file => 'siodelko-czarne.png', :name => 'siod_skor_black', :price => 0},
+						{:file => 'siodelko-brazowe.png', :name => 'siod_skor_brown', :price => 0}
 					] 
 				},
 				{ 
@@ -163,14 +184,12 @@ class ApplicationController < ActionController::Base
 					] 
 				},
 				{ 
-					:name => "Eko-skóra", 
+					:name => "Obszycie materiałowe", 
 					:colors => [
-						{:file => 'siodelko-czarne.png', :name => 'siod_skor_black', :price => 0},
-						{:file => 'siodelko-czarne3.png', :name => 'black', :price => 0},
-						{:file => 'siodelko-brazowe.png', :name => 'siod_skor_brown', :price => 0},
-						{:file => 'siodelko-szare.png', :name => 'steel', :price => 0}
+						{:file => 'siodelko-fiolet.png', :name => 'siod_violet', :price => 0},
+						{:file => 'siodelko-czerwone.png', :name => 'siod_red', :price => 0}
 					] 
-				},
+				}
 			]
 		}
 		left_elements.append siodelko

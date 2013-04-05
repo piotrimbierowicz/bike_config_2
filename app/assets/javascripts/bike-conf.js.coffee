@@ -10,12 +10,13 @@ class BikeConf
 		@minPartHeight = @currentPartHeight = 328
 		@loadData()
 		@dataSet
-		@defaultBike = {'base': 0, 'wide': 0, 'oslo': 0, 'fblo' :0, 'rblo' :0, 'panc':0, 'ster' :0, 'fszp':0, 'rszp':0, 'ftyr' : 0, 'rtyr' : 0, 'rblo' : 0, 'rblo' : 0, 'chwy' : 0, 'siod': 0, 'nozk': 0, 'robr': 7, 'fobr': 7, 'korb': 7, 'lanc': 3, 'lamp': 0, 'most': 0, 'szty': 0, 'kier': 7, 'hamu': 0 }
+		@defaultBike = {'base': 0, 'wide': 0, 'oslo': 0, 'fblo' :0, 'rblo' :0, 'panc':0, 'ster' :0, 'fszp':0, 'rszp':0, 'ftyr' : 0, 'rtyr' : 0, 'rblo' : 0, 'rblo' : 0, 'chwy' : 0, 'siod': 0, 'nozk': 0, 'robr': 0, 'fobr': 0, 'korb': 0, 'lanc': 0, 'lamp': 1, 'most': 0, 'szty': 1, 'kier': 0, 'hamu': 0, 'bask': 0, 'peda':0 }
 		@loaderIcon = $('#conf-loader')
 		@configMenu = $('#conf-setup-menu ul')
 		@secondaryMenu = $('#conf-setup-secondary-menu ul')
 		@elementTypeLabel = $('#conf-element-type-desc .type')
 		@colorSelector = $('#conf-element-colors ul')
+		@colorBox = $('#conf-element-color-selector')
 		@sumPrice = $('#conf-element-pricebox p.price span')
 		@images_path = 'images/parts/'
 		@loadingNow = 0
@@ -59,12 +60,14 @@ class BikeConf
 				$('#conf-bike').css('height', @orginalPartHeight * (newWidth / @orginalPartWidth))
 				@currentPartWidth = newWidth
 				@currentPartHeight = @orginalPartHeight * (newWidth / @orginalPartWidth)
+			#@colorBox.css('width', currentWidth-123-23-289-20-53)
 		else
 			$('.conf-element img').css('width', @minPartWidth)
 			$('.conf-element img').css('height', @minPartHeight)
 			$('#conf-bike').css('height', @minPartHeight)
 			@currentPartWidth = @minPartWidth
 			@currentPartHeight = @minPartHeight
+			#@colorBox.css('width', 1000-123-23-289-20-53)
 
 	automatedScale: ->
 		$(window).resize =>
@@ -121,6 +124,7 @@ class BikeConf
 
 	initBike: (elementsMap) ->
 		for element in elementsMap
+			console.log(element.sys_name)
 			color = @defaultBike[element.sys_name]
 			imageSrc = @images_path + element.types[0].colors[color].file
 			$('#conf-'+element.sys_name).attr('data-price', element.types[0].colors[color].price)
@@ -223,6 +227,8 @@ class BikeConf
 			@prepareColorSelector(element, elementIndex)
 			@calculatePrice()
 			$('#conf-'+element.sys_name).attr('data-color', 0)
+			$('#conf-element-color-selector li.active').removeClass('active')
+			$('#conf-element-color-selector li:nth-child(1)').addClass('active')
 		)
 		# right arrow
 		rightarrow.click( (event) =>
@@ -252,6 +258,8 @@ class BikeConf
 			@prepareColorSelector(element,elementIndex)
 			@calculatePrice()
 			$('#conf-'+element.sys_name).attr('data-color', 0)
+			$('#conf-element-color-selector li.active').removeClass('active')
+			$('#conf-element-color-selector li:nth-child(1)').addClass('active')
 		)
 		container.append leftarrow
 		container.append label

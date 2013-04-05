@@ -1,86 +1,92 @@
-#conf-setup-menu
-	%ul
-		%li#conf-loader Ładowanie...
+#conf-wrap	
 
-#conf-bike
-	#conf-background.conf-element{:data => { :price => 1799} }
-		%img{:src => 'images/parts/zawsze.png'}
-	#conf-rtyr.conf-element
-		%img
-	#conf-ftyr.conf-element
-		%img
-	#conf-fobr.conf-element
-		%img
-	#conf-robr.conf-element
-		%img
-	#conf-chwy.conf-element
-		%img
-	#conf-siod.conf-element
-		%img
-	#conf-nozk.conf-element
-		%img
-	#conf-lamp.conf-element
-		%img
-	#conf-korb.conf-element
-		%img
-	#conf-lanc.conf-element
-		%img
-	#conf-kier.conf-element
-		%img
-	#conf-fblo.conf-element
-		%img
-	#conf-rblo.conf-element
-		%img
-	#conf-oslo.conf-element
-		%img
-	#conf-most.conf-element
-		%img
-	#conf-panc.conf-element
-		%img
-	#conf-ster.conf-element
-		%img
-	#conf-szty.conf-element
-		%img
-	#conf-fszp.conf-element
-		%img
-	#conf-rszp.conf-element
-		%img
-	#conf-hamu.conf-element
-		%img
-	#conf-base.conf-element
-		%img
-	#conf-wide.conf-element
-		%img
+	#conf-setup-menu
+		%ul
+			%li#conf-loader Ładowanie...
 
-#conf-setup-secondary-menu
-	%ul
+	#conf-bike
+		#conf-background.conf-element{:data => { :price => 1799} }
+			%img{:src => 'images/parts/zawsze.png'}
+		#conf-rtyr.conf-element
+			%img
+		#conf-ftyr.conf-element
+			%img
+		#conf-fobr.conf-element
+			%img
+		#conf-robr.conf-element
+			%img
+		#conf-chwy.conf-element
+			%img
+		#conf-siod.conf-element
+			%img
+		#conf-nozk.conf-element
+			%img
+		#conf-bask.conf-element
+			%img
+		#conf-lamp.conf-element
+			%img
+		#conf-korb.conf-element
+			%img
+		#conf-lanc.conf-element
+			%img
+		#conf-kier.conf-element
+			%img
+		#conf-fblo.conf-element
+			%img
+		#conf-rblo.conf-element
+			%img
+		#conf-oslo.conf-element
+			%img
+		#conf-most.conf-element
+			%img
+		#conf-panc.conf-element
+			%img
+		#conf-ster.conf-element
+			%img
+		#conf-szty.conf-element
+			%img
+		#conf-fszp.conf-element
+			%img
+		#conf-rszp.conf-element
+			%img
+		#conf-hamu.conf-element
+			%img
+		#conf-base.conf-element
+			%img
+		#conf-wide.conf-element
+			%img
+		#conf-peda.conf-element
+			%img
 
-.clearfix
-
-#conf-bottom-bar
-	#conf-element-type-desc
-		%p 
-			%strong Typ elementu:
-		%p.type Generowany tekst
-	#conf-element-color-selector
-		%p.label
-			%strong Wybierz kolor:
-		#conf-element-colors
-			%ul
-	#conf-element-pricebox
-		%p.label 
-			Cena roweru
-			%br
-			%span Kwota zawiera podatek vat 23%
-		%p.price 
-			%span
-			zł
+	#conf-setup-secondary-menu
+		%ul
 
 	.clearfix
 
-#conf-submit-bar
-	%a.submit Kupuję
-	%a.clear{:href=>'#'} Wyczyść
-	%a.twitter Twitter
-	%a.facebook Facebook
-	.clearfix
+	#conf-bottom-bar
+		#conf-element-type-desc
+			%p 
+				%strong Typ elementu:
+			%p.type
+		#conf-element-pricebox
+			%p.label 
+				Cena roweru
+				%br
+				%span Kwota zawiera podatek vat 23%
+			%p.price 
+				%span
+				zł
+		#conf-element-color-selector
+			%p.label
+				%strong Wybierz kolor:
+			#conf-element-colors
+				%ul
+
+		.clearfix
+
+	#conf-submit-bar
+		%a.submit Kupuję
+		%a.clear{:href=>'#'} Wyczyść
+		%a.twitter Twitter
+		%a.facebook Facebook
+		.clearfix

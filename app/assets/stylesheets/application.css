@@ -141,19 +141,19 @@
 
 #conf-element-type-desc {
 	float: left;
-	width: 123px;
+	width: 147px;
 	padding-top: 18px;
 	height: 43px;
 	padding-left: 10px;
 }
 
 #conf-element-color-selector {
-	float: left;
-	width: 405px;
 	margin-left: 23px;
 	padding-top: 22px;
 	height: 39px;
 	padding-left: 12px;
+	margin-right: 328px;
+	margin-left: 176px;
 }
 
 #conf-element-color-selector ul {
@@ -190,7 +190,7 @@
 
 #conf-element-pricebox {
 	float: right;
-	width: 389px;
+	width: 289px;
 	padding-left: 20px;
 	padding-top: 20px;
 	height: 41px;
@@ -250,4 +250,8 @@
 	width: 33px;
 	height: 33px;
 	margin-left: 6px;
+}
+
+#conf-wrap {
+	min-width: 990px;
 }
