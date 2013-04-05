@@ -1,5 +1,23 @@
 #conf-wrap	
 
+	#conf-form
+		.center		
+			%a.hide{:href=>'#'} X
+			%h3 Złóż zamówienie
+			.leftcol
+				%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lorem orci, quis luctus justo. Vestibulum vestibulum blandit est, sit amet lacinia ante adipiscing id. 
+				%p Nulla eleifend neque ut est egestas luctus. Vestibulum suscipit dui nec urna tempus laoreet. Donec luctus augue in tortor tincidunt adipiscing.
+			.rightcol
+				%form
+					%p
+						%input{:type=>'text', :placeholder=>'Adres e-mail'}
+					%p
+						%input{:type=>'text', :placeholder=>'Numer telefonu'}
+					%p 
+						%input{:type=>'submit', :value=>'Wyślij'}
+					%textarea#config-string
+			.clearfix
+
 	#conf-setup-menu
 		%ul
 			%li#conf-loader Ładowanie...
@@ -85,7 +103,7 @@
 		.clearfix
 
 	#conf-submit-bar
-		%a.submit Kupuję
+		%a.submit{:href=>'#'} Kupuję
 		%a.clear{:href=>'#'} Wyczyść
 		%a.twitter Twitter
 		%a.facebook Facebook

@@ -21,6 +21,25 @@ class BikeConf
 		@images_path = 'images/parts/'
 		@loadingNow = 0
 		@automatedScale()
+		@popupTriggers()
+
+	popupTriggers: ->
+		$('#conf-form a.hide').click (event) =>
+			event.preventDefault()
+			$('#conf-form').hide()
+
+	parseConfigString: ->
+		string = ''
+		$('.conf-element').each (element) ->
+			string += $(this).attr('id')
+			string += '-type='
+			string += $(this).attr('data-type')
+			string += '&'
+			string += $(this).attr('id')
+			string += '-color='
+			string += $(this).attr('data-color')
+			string += '&'
+		return string
 
 	updateHamulec: ->
 		if @hamulecBeben
@@ -91,6 +110,11 @@ class BikeConf
 			event.preventDefault()
 			@restoreDefault()
 
+		$('#conf-submit-bar .submit').click (event) =>
+			event.preventDefault()
+			$('#config-string').val( @parseConfigString() )
+			$('#conf-form').show()
+
 	prepareColorSelector: (elementSet, index) ->
 		element = elementSet.types[index]
 		currentColor = parseInt($('#conf-'+elementSet.sys_name).attr('data-color'))
@@ -125,11 +149,11 @@ class BikeConf
 
 	initBike: (elementsMap) ->
 		for element in elementsMap
-			console.log(element.sys_name)
 			color = @defaultBike[element.sys_name]
 			imageSrc = @images_path + element.types[0].colors[color].file
 			$('#conf-'+element.sys_name).attr('data-price', element.types[0].colors[color].price)
 			$('#conf-'+element.sys_name).attr('data-color', color)
+			$('#conf-'+element.sys_name).attr('data-type', 0)
 			@createImage( element.sys_name, imageSrc )
 
 	createImage: (elementName, imageSrc) ->
@@ -228,6 +252,7 @@ class BikeConf
 			@prepareColorSelector(element, elementIndex)
 			@calculatePrice()
 			$('#conf-'+element.sys_name).attr('data-color', 0)
+			$('#conf-'+element.sys_name).attr('data-type', elementIndex)
 			$('#conf-element-color-selector li.active').removeClass('active')
 			$('#conf-element-color-selector li:nth-child(1)').addClass('active')
 		)
@@ -259,6 +284,7 @@ class BikeConf
 			@prepareColorSelector(element,elementIndex)
 			@calculatePrice()
 			$('#conf-'+element.sys_name).attr('data-color', 0)
+			$('#conf-'+element.sys_name).attr('data-type', elementIndex)
 			$('#conf-element-color-selector li.active').removeClass('active')
 			$('#conf-element-color-selector li:nth-child(1)').addClass('active')
 		)
